@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.employees.my_employees.MyEmployeeFragment"
+    android:background="#DADEE7">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leggtilknapp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="225dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+
+        android:text="@string/addEmployeeBtn"
+        android:textAllCaps="false"
+        android:textColor="@color/text_grey"
+        android:textSize="18sp"
+        app:backgroundTint="#EEF0F4"
+        android:background="@drawable/rounded_corner_view"
+        app:icon="@drawable/group"
+        app:iconGravity="textStart"
+        app:iconTint="@null"
+
+        />
+
+    <TextView
+        android:id="@+id/tekstAnsatte"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="17dp"
+        android:layout_width="330dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/leggtilknapp"
+        android:text="@string/dine_ansatte"
+        android:textColor="#282F3E"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ansatt_list"
+        android:layout_below="@id/tekstAnsatte"
+        android:visibility="visible"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tv_no_employees_added_yet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/dine_ansatte"
+        android:textColor="#282F3E"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

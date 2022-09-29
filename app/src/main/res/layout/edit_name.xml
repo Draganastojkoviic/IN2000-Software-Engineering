@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E9EC">
+
+
+
+    <EditText
+
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:drawablePadding="10dp"
+        android:backgroundTint="#DADEE7"
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner_view"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:autofillHints="" />
+
+
+    <EditText
+
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/name"
+        android:padding="10dp"
+        android:backgroundTint="#DADEE7"
+        android:background="@drawable/rounded_corner_view"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/lagre"
+        android:layout_width="173dp"
+        android:layout_height="51dp"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="-218dp"
+        android:background="@drawable/rounded_corners_button"
+        android:text="@string/lagre"
+        android:textAllCaps="false"
+        android:textColor="@color/text_grey"
+        android:textSize="20sp"
+        app:backgroundTint="@color/button_yellow" />
+
+
+</RelativeLayout>

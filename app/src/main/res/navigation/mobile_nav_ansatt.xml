@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_nav_ansatt.xml"
+    app:startDestination="@+id/navigation_available_shifts">
+
+    <fragment
+        android:id="@+id/navigation_available_shifts"
+        android:name="com.example.team31.ui.ansatt_interface.available_shifts.AvailableShiftsListFragment"
+        android:label="@string/title_available_shifts"
+        tools:layout="@layout/available_shifts_list_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_accepted_shifts"
+        android:name="com.example.team31.ui.ansatt_interface.my_shifts.MyShiftsFragment"
+        android:label="@string/title_my_shifts"
+        tools:layout="@layout/my_shifts_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile_ansatt"
+        android:name="com.example.team31.ui.ansatt_interface.ansatt_profile.ProfileFragmentAnsatt"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_fragment_ansatt_fragment">
+
+        <action
+            android:id="@+id/action_navigation_profile_ansatt_to_edit_employee_password"
+            app:destination="@id/edit_employee_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/edit_employee_password"
+        android:name="com.example.team31.ui.ansatt_interface.ansatt_profile.edit_employee_password"
+        android:label="edit_employee_password"
+        tools:layout="@layout/edit_employee_password" >
+        <action
+            android:id="@+id/action_edit_employee_password_to_navigation_profile_ansatt"
+            app:destination="@id/navigation_profile_ansatt" />
+    </fragment>
+
+</navigation>

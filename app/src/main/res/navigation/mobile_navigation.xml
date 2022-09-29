@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/navigation_overview">
+
+    <fragment
+        android:id="@+id/navigation_overview"
+        android:name="com.example.team31.ui.overview.week_overview.OverviewFragment"
+        android:label="@string/title_overview"
+        tools:layout="@layout/overview_fragment" >
+        <action
+            android:id="@+id/actionDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_employees"
+        android:name="com.example.team31.ui.employees.my_employees.MyEmployeeFragment"
+        android:label="@string/title_employees"
+        tools:layout="@layout/employees_fragment" >
+        <action
+            android:id="@+id/action_navigation_employees_to_addMyEmpoyeeFragment"
+            app:destination="@id/addMyEmpoyeeFragment" />
+        <action
+            android:id="@+id/action_navigation_employees_to_addMyEmpoyeeFragment2"
+            app:destination="@id/addMyEmpoyeeFragment" />
+        <argument
+            android:name="ansattId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_employees_to_EditEmployee"
+            app:destination="@id/EditEmployee" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.team31.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_name"
+            app:destination="@id/edit_name"/>
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_pos"
+            app:destination="@id/edit_pos" />
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_work"
+            app:destination="@id/edit_work" />
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_weather"
+            app:destination="@id/edit_weather" />
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_opening"
+            app:destination="@id/edit_opening" />
+        <action
+            android:id="@+id/action_navigation_profile_to_edit_password"
+            app:destination="@id/edit_password" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.team31.ui.overview.detail.DetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/detail_fragment" >
+        <argument
+            android:name="RefinedForecast"
+            app:argType="com.example.team31.ui.overview.week_overview.RefinedForecast" />
+        <argument
+            android:name="extraStaff"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/edit_name"
+        android:name="com.example.team31.ui.profile.edit_name"
+        android:label="Oppdater navn"
+        tools:layout="@layout/edit_name" >
+        <action
+            android:id="@+id/action_edit_name_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_pos"
+        android:name="com.example.team31.ui.profile.edit_pos"
+        android:label="Endre posisjon"
+        tools:layout="@layout/edit_pos" >
+        <action
+            android:id="@+id/action_edit_pos_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_work"
+        android:name="com.example.team31.ui.profile.edit_work"
+        android:label="Endre bemanning"
+        tools:layout="@layout/edit_work" >
+        <action
+            android:id="@+id/action_edit_work_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_weather"
+        android:name="com.example.team31.ui.profile.edit_weather"
+        android:label="Oppdater temperatur"
+        tools:layout="@layout/edit_weather" >
+        <action
+            android:id="@+id/action_edit_weather_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_opening"
+        android:name="com.example.team31.ui.profile.edit_opening"
+        android:label="Oppdater åpningstider"
+        tools:layout="@layout/edit_opening" >
+        <action
+            android:id="@+id/action_edit_opening_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_password"
+        android:name="com.example.team31.ui.profile.edit_password"
+        android:label="Endre password"
+        tools:layout="@layout/edit_password" >
+        <action
+            android:id="@+id/action_edit_password_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMyEmpoyeeFragment"
+        android:name="com.example.team31.ui.employees.add_my_employee.AddMyEmpoyeeFragment"
+        android:label="Ansatte"
+        tools:layout="@layout/addmyemployee_fragment" />
+    <fragment
+
+        android:id="@+id/EditEmployee"
+        android:name="com.example.team31.ui.employees.myEmployees.EditEmployee"
+        android:label="Ansatte"
+        tools:layout="@layout/fragment_edit_employee" >
+        <argument
+            android:name="ansattId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

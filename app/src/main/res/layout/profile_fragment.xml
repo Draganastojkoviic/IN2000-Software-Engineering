@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment"
+    android:background="@color/fragment_background"
+    android:isScrollContainer="true">
+
+
+    <Button
+        android:id="@+id/logg_ut"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/transparent_button"
+        android:backgroundTint="@color/card_background"
+        android:text="@string/logg_ut"
+        android:textAllCaps="false"
+        android:textColor="#1E6B9C"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corner_view"
+        android:backgroundTint="@color/card_background"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logg_ut"
+       >
+
+
+        <ImageButton
+            android:id="@+id/edit_name"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
+            android:background="#ECECEC"
+            android:contentDescription="@string/edit"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit" />
+
+        <TextView
+            android:id="@+id/navn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/navn"
+            android:text="@string/e_mail"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background= "@drawable/rounded_corner_view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        android:backgroundTint="@color/card_background">
+
+        <ImageButton
+            android:id="@+id/edit_pos"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
+            android:src="@drawable/edit"
+            android:scaleType="fitCenter"
+            android:background="#ECECEC"
+            android:contentDescription="@string/edit" />
+
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/posisjon"
+
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:backgroundTint="@color/card_background"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:background= "@drawable/rounded_corner_view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l2"
+        android:backgroundTint="@color/card_background"
+        >
+
+
+        <ImageButton
+            android:id="@+id/edit_work"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
+            android:background="#ECECEC"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit"
+            android:contentDescription="@string/edit" />
+
+
+        <TextView
+            android:id="@+id/tekst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bemanning"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/normal_bemanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/normal_bemanning"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/tekst"
+            />
+
+        <TextView
+            android:id="@+id/max_bemanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maksimal_bemanning"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/normal_bemanning"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background= "@drawable/rounded_corner_view"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l3"
+        android:backgroundTint="@color/card_background">
+
+        <ImageButton
+            android:id="@+id/edit_weather"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
+            android:background="#ECECEC"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit"
+            android:contentDescription="@string/edit" />
+
+        <TextView
+            android:id="@+id/tekst1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v_rforhold"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+        <TextView
+            android:id="@+id/trigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperatur_under"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/tekst1"/>
+
+        <TextView
+            android:id="@+id/nedbor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nedb_r_ja_nei"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/trigger"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/l6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background= "@drawable/rounded_corner_view"
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l4"
+        android:backgroundTint="@color/card_background">
+
+        <ImageButton
+            android:id="@+id/edit_opening"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
+            android:background="#ECECEC"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit"
+            android:contentDescription="@string/edit" />
+
+
+        <TextView
+            android:id="@+id/aapning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apningstider"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/edit_passord"
+        android:layout_width="173dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/l6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_corners_button"
+        android:text="@string/endre_passord"
+        android:textAllCaps="false"
+        android:textColor="@color/text_grey"
+        android:textSize="18sp"
+        app:backgroundTint="@color/button_yellow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/l6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
