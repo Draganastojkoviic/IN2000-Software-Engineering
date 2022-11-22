@@ -7,7 +7,7 @@ import com.example.team31.Bruker
 import com.google.firebase.database.FirebaseDatabase
 
 class AddMyEmployeeViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+    
 
     fun leggTilAnsatt(admin: Bruker, myEmployee: Ansatt) {
         val refAnsatt = FirebaseDatabase.getInstance().getReference("Ansatte").child(admin.id!!)
